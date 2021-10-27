@@ -12,3 +12,25 @@
 button:focus {
   outline: none;
 }
+
+.arrow {
+  @apply inline-block p-2 border-black dark:border-white transition-all duration-200 ease-in-out;
+
+  border-width: 0 3px 3px 0;
+
+  &.right {
+    transform: rotate(-45deg);
+
+    &:hover {
+      transform: rotate(-45deg) scale(125%);
+    }
+  }
+
+  &.left {
+    transform: rotate(135deg);
+
+    &:hover {
+      transform: rotate(135deg) scale(125%);
+    }
+  }
+}

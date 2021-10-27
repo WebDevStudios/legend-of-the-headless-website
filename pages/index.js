@@ -41,14 +41,14 @@ export default function Index({slides}) {
             ))}
           </Slider>
 
-          <navigation className="grid grid-cols-2 text-4xl">
+          <navigation className="grid grid-cols-2 pt-4">
             <ButtonBack className="text-left">
               <span className="sr-only">Previous</span>
-              &#10508;
+              <i className="arrow left" />
             </ButtonBack>
             <ButtonNext className="text-right">
               <span className="sr-only">Next</span>
-              &#10509;
+              <i className="arrow right" />
             </ButtonNext>
           </navigation>
         </CarouselProvider>
