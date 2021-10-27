@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import {
   ButtonBack,
   ButtonNext,
@@ -11,39 +12,48 @@ export default function Index({slides}) {
   const totalSlides = slides.length
 
   return (
-    <main className="container">
-      <CarouselProvider
-        infinite={true}
-        interval={3000}
-        isIntrinsicHeight={true}
-        lockOnWindowScroll={true}
-        naturalSlideHeight={1920}
-        naturalSlideWidth={1080}
-        totalSlides={totalSlides}
-        visibleSlides={1}
-      >
-        <Slider>
-          {slides.map((slide, index) => (
-            <Slide key={index} index={index}>
-              <div
-                dangerouslySetInnerHTML={{__html: slide?.content?.rendered}}
-              />
-            </Slide>
-          ))}
-        </Slider>
+    <>
+      <Head>
+        <title>The Legend of the Headless Website from WebDevStudios</title>
+        <meta
+          name="description"
+          content="Join us as we delve into the (not so spooky) Legend of the Headless WordPress Website! This fun event is geared towards anyone interested in learning more about the benefits of a Headless/Decoupled WordPress setup!"
+        ></meta>
+      </Head>
+      <main className="container">
+        <CarouselProvider
+          infinite={true}
+          interval={3000}
+          isIntrinsicHeight={true}
+          lockOnWindowScroll={true}
+          naturalSlideHeight={1920}
+          naturalSlideWidth={1080}
+          totalSlides={totalSlides}
+          visibleSlides={1}
+        >
+          <Slider>
+            {slides.map((slide, index) => (
+              <Slide key={index} index={index}>
+                <div
+                  dangerouslySetInnerHTML={{__html: slide?.content?.rendered}}
+                />
+              </Slide>
+            ))}
+          </Slider>
 
-        <navigation className="grid grid-cols-2 text-4xl mt-12">
-          <ButtonBack className="text-left">
-            <span className="sr-only">Previous</span>
-            &#10508;
-          </ButtonBack>
-          <ButtonNext className="text-right">
-            <span className="sr-only">Next</span>
-            &#10509;
-          </ButtonNext>
-        </navigation>
-      </CarouselProvider>
-    </main>
+          <navigation className="grid grid-cols-2 text-4xl mt-12">
+            <ButtonBack className="text-left">
+              <span className="sr-only">Previous</span>
+              &#10508;
+            </ButtonBack>
+            <ButtonNext className="text-right">
+              <span className="sr-only">Next</span>
+              &#10509;
+            </ButtonNext>
+          </navigation>
+        </CarouselProvider>
+      </main>
+    </>
   )
 }
 
