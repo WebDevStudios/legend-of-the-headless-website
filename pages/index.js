@@ -41,7 +41,7 @@ export default function Index({slides}) {
             ))}
           </Slider>
 
-          <navigation className="grid grid-cols-2 text-4xl mt-12">
+          <navigation className="grid grid-cols-2 text-4xl">
             <ButtonBack className="text-left">
               <span className="sr-only">Previous</span>
               &#10508;
