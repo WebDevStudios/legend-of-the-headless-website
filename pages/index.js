@@ -49,7 +49,7 @@ export default function Index({slides}) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    `https://pdev.test/wp-json/wp/v2/slides?per_page=100&order=asc`
+    `https://legend-headless.wdslab.com/wp-json/wp/v2/slides?per_page=100&order=asc`
   )
   const slides = await res.json()
 
