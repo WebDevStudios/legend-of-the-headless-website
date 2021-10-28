@@ -2,6 +2,8 @@
 
 Join us as we delve into the (not so spooky) Legend of the Headless WordPress Website! This fun event is geared towards anyone interested in learning more about the benefits of a Headless/Decoupled WordPress setup!
 
+![screenshot](https://legend-headless.wdslab.com/wp-content/uploads/2021/10/Legend-of-the-Headless-Website_Page_01.png)
+
 Topics:
 - What is a Headless WordPress Website?
 - Considerations when deciding if Headless is a good approach for you.
