@@ -8,17 +8,30 @@ import {
 } from 'pure-react-carousel'
 
 export default function Index({slides}) {
-  // Get total number of slides.
   const totalSlides = slides.length
+  const title = `The Legend of the Headless Website from WebDevStudios`
+  const desc = `Join us as we delve into the (not so spooky) Legend of the Headless WordPress Website! This fun event is geared towards anyone interested in learning more about the benefits of a Headless/Decoupled WordPress setup!`
+  const url = `https://legend-of-the-headless-website.vercel.app/`
+  const img = `https://legend-headless.wdslab.com/wp-content/uploads/2021/10/Legend-of-the-Headless-Website_Page_01-2048x1152.png`
 
   return (
     <>
       <Head>
-        <title>The Legend of the Headless Website from WebDevStudios</title>
-        <meta
-          name="description"
-          content="Join us as we delve into the (not so spooky) Legend of the Headless WordPress Website! This fun event is geared towards anyone interested in learning more about the benefits of a Headless/Decoupled WordPress setup!"
-        ></meta>
+        <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={desc} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={img} />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={desc} />
+        <meta property="twitter:image" content={img} />
       </Head>
       <main className="container">
         <CarouselProvider
