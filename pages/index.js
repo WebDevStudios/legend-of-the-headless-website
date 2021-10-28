@@ -37,6 +37,9 @@ export default function Index({slides}) {
                 <div
                   dangerouslySetInnerHTML={{__html: slide?.content?.rendered}}
                 />
+                <div className="text-center">
+                  {index + 1} of {totalSlides}
+                </div>
               </Slide>
             ))}
           </Slider>
